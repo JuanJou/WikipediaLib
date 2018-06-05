@@ -10,9 +10,10 @@ class DataWikipediaJSON implements DataWikipedia {
     protected WikipediaAPI wiki;
     private Parser parserResponse;
 
-    DataWikipediaJSON(){
+    DataWikipediaJSON(Parser parser){
 
-        parserResponse = new ParserJSON();
+        parserResponse = parser;
+        this.connect();
     }
 
     @Override
