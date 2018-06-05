@@ -16,10 +16,6 @@ Para la utilización de la libería se debe crear la instancia DataWikiepdiaJSON
 ```java
 DataWikipedia dw = new DataWikipediaJSON();
 ```
-Luego de la creación de la instancia se debe conectar con el servicion mediante el metodo ```connect()```
-```java
-dw.connect()
-```
 
 Para la consulta de un termino se debe utilizar el metodo 
 ```java
