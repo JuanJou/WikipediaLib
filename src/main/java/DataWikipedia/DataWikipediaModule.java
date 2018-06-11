@@ -6,7 +6,7 @@ public class DataWikipediaModule {
     private DataWikipedia dataWikipedia;
 
     private DataWikipediaModule(){
-        dataWikipedia = new DataWikipediaJSON(new ParserJSON());
+        dataWikipedia = new DataWikipediaImpl(new ParserJSON());
     }
 
     public static DataWikipediaModule getInstance(){

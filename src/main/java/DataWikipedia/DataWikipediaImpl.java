@@ -10,7 +10,7 @@ class DataWikipediaImpl implements DataWikipedia {
     protected WikipediaAPI wiki;
     private Parser parserResponse;
 
-    DataWikipediaImpl(Parser parser){
+    DataWikipediaJSON(Parser parser){
 
         parserResponse = parser;
         this.connect();
