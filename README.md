@@ -12,17 +12,14 @@ Para añadir al proyecto, ejecutar el comando
 ```git submodule add https://github.com/JuanJou/WikipediaLib.git```
 
 ## Utilización de librería de Wikipedia
-Para la utilización de la libería se debe crear la instancia DataWikiepdiaJSON que implementa la interfaz DataWikipedia
+Para la utilización de la libería se debe usar el modulo DataWikipediaModule, implementado con el patron Singleton, de la siguiente manera:
 ```java
-DataWikipedia dw = new DataWikipediaJSON();
-```
-Luego de la creación de la instancia se debe conectar con el servicion mediante el metodo ```connect()```
-```java
-dw.connect()
+DataWikipedia dataWikipedia = DataWikipediaModule.getInstance().getDataWikipedia();
 ```
 
 Para la consulta de un termino se debe utilizar el metodo 
 ```java
 String getMeaning(String term) throws IOException
+String definicion=dataWikipedia.getMeaning("Termino");
 ```
 Se debe pasar el ```String``` del termino a buscar. El metodo devuelve un ```String``` que contiene el resultado de la busqueda, en caso de no encontrar el termino el metodo devuelve ```null```
