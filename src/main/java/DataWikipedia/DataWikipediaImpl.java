@@ -10,7 +10,7 @@ class DataWikipediaImpl implements DataWikipedia {
     protected WikipediaAPI wiki;
     private Parser parserResponse;
 
-    DataWikipediaJSON(Parser parser){
+    DataWikipediaImpl(Parser parser){
 
         parserResponse = parser;
         this.connect();
@@ -18,6 +18,7 @@ class DataWikipediaImpl implements DataWikipedia {
 
     @Override
     public String getMeaning(String term) throws IOException{
+        
         Response<String> response;
 
         response = wiki.getTerm(term).execute();
